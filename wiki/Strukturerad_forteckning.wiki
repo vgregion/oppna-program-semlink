@@ -2,6 +2,10 @@
 
 = Strukturerad förteckning =
 
+==Innehåll==
+
+<wiki:toc max_depth="3" />
+
 ==Syfte==
 
   * Få en översikt av vilka komponenter som används. 
@@ -13,7 +17,7 @@
 || Namn || Namn på komponent ||
 || Info || Kort information om komponent ||
 || Leverantör || Komponentleverantör ||
-|| Version ||  ||
+|| Version || Versionsnummer  ||
 || Download || URL för nerladdningsbar komponent ||
 || Dokumentation || URL för dokumentation ||
 
