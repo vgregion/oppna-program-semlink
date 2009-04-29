@@ -1,18 +1,18 @@
-#Strukturerad förteckning över komponenter som används.
+#Strukturerad förteckning över komponenter
 
-==Innehåll==
+=Innehåll=
 
 <wiki:toc max_depth="3" />
 
-==Syfte==
+=Syfte=
 
   * Få en översikt av vilka komponenter som används. 
   * Förenkla guide och utvecklingsförfarandet mha dokumentationslänkar. 
 
 
-==Format==
+=Format=
 
-|| Namn || Namn på komponent ||
+|| *Namn* || *Namn på komponent* ||
 || Info || Kort information om komponent ||
 || Leverantör || Komponentleverantör ||
 || Version || Versionsnummer  ||
@@ -20,15 +20,15 @@
 || Dokumentation || URL för dokumentation ||
 
 
-==Komponenter==
-===Utvecklingsmiljö===
+=Komponenter=
+==Utvecklingsmiljö==
 
-|| Namn	|| Info	|| Leverantör || Version || Download || Dokumentation ||
+|| *Namn* || *Info* || *Leverantör* || *Version* || *Download* || *Dokumentation* ||
 || Maven || Byggverktyg || Apache || 2.1.X || http://maven.apache.org/download.html || http://maven.apache.org/guides/index.html ||
 || Eclipse || IDE || Eclipse || 3.4 || http://www.eclipse.org/downloads ||
 || Tomcat || Applikationsserver || Apache || 6.0.X || http://tomcat.apache.org/download-60.cgi || http://tomcat.apache.org/tomcat-6.0-doc/index.html ||
 
-===Javautveckling===
+==Javautveckling==
 
 || *Namn* || *Info* || *Leverantör* || *Version* || *Download* || *Dokumentation* ||
 || Spring Framework || Ramverk för lös koppling av komponenter/klasser genom dependency injection. || SpringSource || 2.5.5 || Nedladdas mha Maven || http://www.springsource.org/documentation || 
