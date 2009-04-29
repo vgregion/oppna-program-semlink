@@ -1,7 +1,6 @@
-#Strukturerad förteckning över komponenter
+_Strukturerad förteckning över komponenter_
 
 =Innehåll=
-
 <wiki:toc max_depth="3" />
 
 =Syfte=
