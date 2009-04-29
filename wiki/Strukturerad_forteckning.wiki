@@ -6,11 +6,11 @@
 || Namn || Namn på komponent ||
 || Namn || Namn på komponent ||
 
-|| Info || Kort information om komponent
-|| Leverantör || Komponentleverantör
-|| Version || 
-|| Download || URL för nerladdningsbar komponent
-|| Dokumentation || URL för dokumentation
+|| Info || Kort information om komponent ||
+|| Leverantör || Komponentleverantör ||
+|| Version ||  ||
+|| Download || URL för nerladdningsbar komponent ||
+|| Dokumentation || URL för dokumentation ||
 || Status || 
 
 
