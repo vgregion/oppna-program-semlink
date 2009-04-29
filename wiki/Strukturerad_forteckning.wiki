@@ -1,10 +1,22 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
+= Strukturerad förteckning =
 
-Add your content here.
 
-test
+|| Namn || Namn på komponent ||
+|| Namn || Namn på komponent ||
+
+|| Info || Kort information om komponent
+|| Leverantör || Komponentleverantör
+|| Version || 
+|| Download || URL för nerladdningsbar komponent
+|| Dokumentation || URL för dokumentation
+|| Status || 
+
+
+
+
+
 
 = Details =
 
