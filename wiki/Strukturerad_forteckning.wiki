@@ -2,10 +2,13 @@
 
 = Strukturerad förteckning =
 
+==Syfte==
+
+* Få en översikt av vilka komponenter som används. 
+* Förenkla guide och utvecklingsförfarandet mha dokumentationslänkar. 
+
 
 || Namn || Namn på komponent ||
-|| Namn || Namn på komponent ||
-
 || Info || Kort information om komponent ||
 || Leverantör || Komponentleverantör ||
 || Version ||  ||
