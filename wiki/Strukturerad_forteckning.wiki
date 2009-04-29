@@ -4,9 +4,11 @@
 
 ==Syfte==
 
-* Få en översikt av vilka komponenter som används. 
-* Förenkla guide och utvecklingsförfarandet mha dokumentationslänkar. 
+  * Få en översikt av vilka komponenter som används. 
+  * Förenkla guide och utvecklingsförfarandet mha dokumentationslänkar. 
 
+
+==Format==
 
 || Namn || Namn på komponent ||
 || Info || Kort information om komponent ||
@@ -17,6 +19,10 @@
 || Status || 
 
 
+==Komponenter==
+===Utvecklingsmiljö===
+
+|| Namn	|| Info	|| Leverantör || Version || Download || Dokumentation || Status ||
 
 
 
