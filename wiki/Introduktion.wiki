@@ -12,12 +12,14 @@ Hälsa och sjukvårdsinstanser publicerar dagligen stora mängder information p�
 
   * För informationsproducenter existerar även indexeringsfrågor såsom att välja rätt nyckelord och annan metadatabeskrivning. Även detta tar tid och är komplext för informationsproducenter, speciellt om de använder kontrollerade vokabulär, exempelvis MeSH och SnoMED, som kräver expertiskunnande.
 
+
 ==Semantisk tjänst==
 Den semantiska tjänsten för informationsproducenter tillhandahåller ett automatiserat skapande av relaterade länkar.
 
 Förslagen på länkarna är integrerat i den redaktionella miljön enligt principen "klicka och spara". Detta underlättar informationsproducenternas arbete med länkhantering, interna såsom externa, och kvalitetskontroll av länkar. Tjänsten innefattar en kontrollpanel där man listar betrodda källor. I dagsläget är det integrerat som ett fristående EpiServer plugin.
 
 En standardiserad hierarkisk struktur (taxonomi) används för att dels addera beskrivande data (metadata) och att relatera sidorna emellan.
+
 
 ==Fördelar==
 
