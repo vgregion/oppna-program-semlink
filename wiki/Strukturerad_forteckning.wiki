@@ -1,4 +1,4 @@
-_Strukturerad förteckning över komponenter som används_
+#summary Strukturerad förteckning över komponenter som används
 
 =Innehåll=
 <wiki:toc max_depth="3" />
