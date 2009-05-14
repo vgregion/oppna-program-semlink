@@ -4,7 +4,7 @@
 
 Den semantiska tjänsten är uppbyggd av 4 moduler, se figur 2. Harvester Service extraherar innehållet från websidor, kategoriserar dem enligt en modell och sparar informationen i en RDF databas. Selection Service extraherar en viss typ av information och är indata för Indexing Service. Index Service indexterar informationen och lagrar detta i ett Lucene index. Query Service får nyckelord som inparametrar och använder sig av Taxonomy Service (DTS) för att hämta ut olika relationer. Resultaten från Taxonomy Service söks i indexet.
 
-[* bild *]
+http://code.google.com/p/oppna-program-semlink/source/browse/wiki/images/modules1.jpg
 
 == Harvester Service ==
 
@@ -35,7 +35,7 @@ Den semantiska applikationen är förberedd för att även externt hantera crawl
 
 === Översikt ===
 
-[* bild *]
+http://code.google.com/p/oppna-program-semlink/source/browse/wiki/images/modules2.jpg
 
   # Request Jobs
 Harvestern hämtar site- och jobblistor för harvest.
@@ -81,7 +81,7 @@ För att mer effektivt söka i RDF har Lucenes sökmotor integrerats med ARQ (SP
 == Harvest kontrollpanel ==
 För att lägga till en sitelista över vilka siter som skall ingå i den semantiska tjänsten loggar man in på admin panelen.
 
-[* bild *]
+http://code.google.com/p/oppna-program-semlink/source/browse/wiki/images/harvestermanager.jpg
 
   # *"Site URL"* kommer anges som källa för dokumentet som harvestas. Detta används sedan för att gruppera de olika källorna. Urlen kommer sedan visas utan _"http://"_ och _"www"_.
 
@@ -94,5 +94,3 @@ För att lägga till en sitelista över vilka siter som skall ingå i den semant
   # *"Exkludera RegExp mönster"* betyder att man kan exkludera vissa sidor. Detta måste användas tillsammans med "Inkludera RegExp mönster".
 
   # Ändra eller ta bort källor från sitelistan.
-
-
