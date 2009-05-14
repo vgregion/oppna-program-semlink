@@ -67,15 +67,15 @@ Nedan visas ett exempel på sidan http://vard.vgregion.se/sv/Sjukdomar-och-besva
 Tabell 1. Pseudo RDF efter harvesting
 
 
-== Selection Service ==
+== 2. Selection Service ==
 För att undvika att råka ”missa” sidor i sökresultatet p g a avsaknaden av nyckelord eller bristfälliga nyckelord (till en början) kommer Selection Service modulen att sortera ut nyckelord, dc.titel och dc.description ur RDF repository. Dessa kommer sedan användas för Indexing Service för att indexera textsträngar i nyckelord, dc.titel och dc.description. 
 Genom att ta ut en större datamängd bör resultatet spegla verkligheten mer än att endast ta ut nyckelord. Det finns dock inget som säger att vi till en början ändå får en viss diskrepans mellan det förväntade resultatet och det som vi kommer att få.
 
-== Indexing Service ==
+== 3. Indexing Service ==
 RDF databaser och SPARQL är ännu inte fullt optimerade såsom SQL och SQL databaser när det gäller snabbhet. För att kunna göra en fulltext sökning och för att effektivisera resultatet indexerar Indexing Service valda textsträngar i ett Lucene index. 
 Indexeringen görs på bl a skos:prefLabel, skos:altLabel, skos:hiddenLabel.
 
-== Query Service ==
+== 4. Query Service ==
 För att mer effektivt söka i RDF har Lucenes sökmotor integrerats med ARQ (SPARQL motorn). Förutom en mer effektiv sökning kan Lucenes motor fulltext söka, mäta resultaten och filtrera ut på olika resultatträffar (ex. under 0.5).
 
 == Harvest kontrollpanel ==
