@@ -83,14 +83,15 @@ För att lägga till en sitelista över vilka siter som skall ingå i den semant
 
 http://oppna-program-semlink.googlecode.com/svn/wiki/images/harvestermanager.jpg
 
-  # *"Site URL"* kommer anges som källa för dokumentet som harvestas. Detta används sedan för att gruppera de olika källorna. Urlen kommer sedan visas utan _"http://"_ och _"www"_.
 
-  # *"StartURL"* anger vart harvestern skall börja extrahera information.
+  1. *"Site URL"* kommer anges som källa för dokumentet som harvestas. Detta används sedan för att gruppera de olika källorna. Urlen kommer sedan visas utan _"http://"_ och _"www"_.
 
-  # *"Harvestdjup"* anger hur djupt ner i länkarna harvestern skall ta sig. 0 indikerar att harvestern endast extraherar sidan som angetts utan att gå vidare. Exempelvis så tar sig harvestern, vid siffran 3, vidare på ett länkdjup av 3. Om man vill att harvestern skall gå vidare genom alla länkar anges -1. 
+  2. *"StartURL"* anger vart harvestern skall börja extrahera information.
 
-  # *"Inkludera RegExp mönster"* betyder att man kan inkludera vissa sidor. Detta måste användas tillsammans med "Exkludera RegExp mönster".
+  3. *"Harvestdjup"* anger hur djupt ner i länkarna harvestern skall ta sig. 0 indikerar att harvestern endast extraherar sidan som angetts utan att gå vidare. Exempelvis så tar sig harvestern, vid siffran 3, vidare på ett länkdjup av 3. Om man vill att harvestern skall gå vidare genom alla länkar anges -1. 
 
-  # *"Exkludera RegExp mönster"* betyder att man kan exkludera vissa sidor. Detta måste användas tillsammans med "Inkludera RegExp mönster".
+  4. *"Inkludera RegExp mönster"* betyder att man kan inkludera vissa sidor. Detta måste användas tillsammans med "Exkludera RegExp mönster".
 
-  # Ändra eller ta bort källor från sitelistan.
+  5. *"Exkludera RegExp mönster"* betyder att man kan exkludera vissa sidor. Detta måste användas tillsammans med "Inkludera RegExp mönster".
+
+  6. Ändra eller ta bort källor från sitelistan.
