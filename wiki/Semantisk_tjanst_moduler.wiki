@@ -6,7 +6,7 @@ Den semantiska tjänsten är uppbyggd av 4 moduler, se figur 2. Harvester Servic
 
 http://oppna-program-semlink.googlecode.com/svn/wiki/images/modules1.jpg
 
-== Harvester Service ==
+== 1. Harvester Service ==
 
 Harvester servicen hanterar extraktionen och RDF konverteringen av html-sidor. Denna modul förbereder för ett gemensamt RDF storage där intern och extern data aggregeras. Harvester servicen har byggts med hjälp av Apertures harvester framework. 
 
@@ -37,16 +37,16 @@ Den semantiska applikationen är förberedd för att även externt hantera crawl
 
 http://oppna-program-semlink.googlecode.com/svn/wiki/images/modules2.jpg
 
-  # Request Jobs
+==== *1. Request Jobs* ====
 Harvestern hämtar site- och jobblistor för harvest.
 
-  # Extract content
+==== *2. Extract content* ====
 Harvestern extraherar och konverterar information. Under extraheringen kommer vissa sidor märkas som nya/modifierade/borttagna. I detta skede kommer de modifierade och borttagna sidorna sparas för att sedan kollas mot databasen med relaterade länkar och flagga länkar som inte längre existerar.
 
-  # Query Taxonomy
+==== *3. Query Taxonomy* ====
 Harvestern slår upp varje nyckelord i Taxonomin. Innan nyckelorden används körs de mot en stoppordlista. De ord som får 0 träffar i taxonomin kommer att sparas undan i en blacklist för att effektivisera frågorna mot taxonomin.
 
-  # Add Taxonomy terms
+==== *4. Add Taxonomy terms* ==== 
 Då Taxonomin får träff adderas information om dess MeSH id, föredragen term och synonymer.
 
 Nedan visas ett exempel på sidan http://vard.vgregion.se/sv/Sjukdomar-och-besvar/Patientberattelser/ då harvestern extraherat, frågat taxonomin och lagt till information.
