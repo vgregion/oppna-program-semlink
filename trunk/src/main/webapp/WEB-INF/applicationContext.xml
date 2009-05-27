@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context">
+		
+	
+	<bean id="globalSource" class="com.m1.semanticapp.datasource.GlobalSource" scope="singleton" init-method="init">
+		<property name="meshData">
+			<value>${config.meshData}</value>
+		</property>
+		<property name="ontologyData">
+			<value>${config.ontologyData}</value>
+		</property>
+		<property name="closureRulesData" value="${config.closureRulesData}"/>
+		<property name="ontClosureRulesData" value="${config.ontClosureRulesData}"/>
+		<property name="indexDir" value="${config.indexDir}"/>
+	</bean>
+
+	
+
+	<!--     WEB SERVICE      -->
+	
+	<bean id="applicationContext" class="org.apache.axis2.extensions.spring.receivers.ApplicationContextHolder" />
+	
+	<bean id="searchResult" class="com.m1.semanticapp.service.search.result.SearchResult"></bean>
+	<bean id="link" class="com.m1.semanticapp.link.Link"></bean>
+	
+	<bean id="relatedSearchService" class="com.m1.semanticapp.service.webservice.RelatedSearchService"></bean>
+	<bean id="linksHandlerService" class="com.m1.semanticapp.service.webservice.LinksHandlerService">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="linkManager" ref="linkManager"/>
+	</bean>
+	<bean id="rdfService" class="com.m1.semanticapp.service.webservice.RdfService"></bean>
+	<bean id="harvesterJobService" class="com.m1.semanticapp.service.webservice.HarvesterJobService">
+		<property name="harvesterManager" ref="harvesterManager"/>
+	</bean>
+
+	<bean id="pageLinkDao" class="com.m1.semanticapp.link.PageLinkDao">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<bean id="pageLinkStatusDao" class="com.m1.semanticapp.link.PageLinkStatusDao">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<bean id="linkManager" class="com.m1.semanticapp.link.LinkManager">
+		<property name="pageLinkDao" ref="pageLinkDao"/>
+		<property name="pageLinkStatusDao" ref="pageLinkStatusDao"/>
+	</bean>
+	
+	<!--    HARVESTER    -->
+	
+	<bean id="harvesterSite" class="com.m1.semanticapp.harvester.HarvesterSite"></bean>
+	<bean id="harvesterJob" class="com.m1.semanticapp.harvester.HarvesterJob"></bean>
+	<bean id="harvesterManager" class="com.m1.semanticapp.harvester.HarvesterManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<bean id="rdfRepository" class="com.m1.semanticapp.repository.RdfRepository">
+		<property name="repositoryDir" value="${sesame.repositoryDir}"/>
+		<property name="repositoryName" value="${sesame.repositoryName}"/>
+		<property name="accessDataDir" value="${sesame.accessDataDir}"/>
+		<property name="accessDataName" value="${sesame.accessDataName}"/>
+	</bean>
+	
+	<!--    PERSISTENT DB     -->
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}"/>
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+	</bean>
+	
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+				<value>classpath:sesame.properties</value>
+				<value>classpath:config.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+</beans>

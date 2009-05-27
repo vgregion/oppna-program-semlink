@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceGroup>
+	
+	<service name="RelatedSearch">
+		<description>Search for related content</description>
+		
+		<parameter name="ServiceClass">com.m1.semanticapp.service.webservice.RelatedSearchService</parameter>
+		<parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+		<parameter name="SpringBeanName">relatedSearchService</parameter>
+		
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+		</messageReceivers>
+	</service>
+
+	<service name="ManageLinks">
+		<description>Manage related links on pages</description>
+		
+		<parameter name="ServiceClass">com.m1.semanticapp.service.webservice.LinksHandlerService</parameter>
+		<parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+		<parameter name="SpringBeanName">linksHandlerService</parameter>
+		
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+		</messageReceivers>
+	</service>
+	
+	<service name="FetchRDF">
+		<description>Handles the RDF</description>
+		
+		<parameter name="ServiceClass">com.m1.semanticapp.service.webservice.RdfService</parameter>
+		<parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+		<parameter name="SpringBeanName">rdfService</parameter>
+		
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+		</messageReceivers>
+	</service>
+	
+	<service name="HarvestJob">
+		<description>Handles the RDF</description>
+		
+		<parameter name="ServiceClass">com.m1.semanticapp.service.webservice.HarvesterJobService</parameter>
+		<parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+		<parameter name="SpringBeanName">harvesterJobService</parameter>
+		
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+		</messageReceivers>
+	</service>	
+
+</serviceGroup>
