@@ -1,5 +1,5 @@
+#summary Krav på server och programvaror.
 #labels Phase-Deploy
-#Summary Krav på server och programvaror.
 
 = Krav på server =
 
