@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="intsvc.semanticService" class="se.vgr.crawler.intsvc.impl.SemanticServiceImpl">
+		
+		<property name="sourceService" ref="system.sourceService"/>
+		<property name="linkService" ref="system.linkService"/>
+		<property name="searchService" ref="system.searchService"/>
+		<property name="httpStatusService" ref="system.httpStatusService"/>
+		
+	</bean>
+
+</beans>

@@ -1,0 +1,166 @@
+<classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1/activation-1.1.jar" sourcepath="M2_REPO/javax/activation/activation/1.1/activation-1.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/xml/bind/jaxb-api/2.0/jaxb-api-2.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/xml/bind/jsr173_api/1.0/jsr173_api-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/info/aduna/commons/aduna-commons-collections/2.3/aduna-commons-collections-2.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/info/aduna/commons/aduna-commons-concurrent/2.2/aduna-commons-concurrent-2.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/info/aduna/commons/aduna-commons-i18n/1.0/aduna-commons-i18n-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/info/aduna/commons/aduna-commons-io/2.4/aduna-commons-io-2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/info/aduna/commons/aduna-commons-iteration/2.3/aduna-commons-iteration-2.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/info/aduna/commons/aduna-commons-lang/2.3/aduna-commons-lang-2.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/info/aduna/commons/aduna-commons-net/2.2/aduna-commons-net-2.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/info/aduna/commons/aduna-commons-text/2.2/aduna-commons-text-2.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/info/aduna/commons/aduna-commons-xml/2.2/aduna-commons-xml-2.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/ant/ant/1.6.5/ant-1.6.5.jar" sourcepath="M2_REPO/ant/ant/1.6.5/ant-1.6.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" sourcepath="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/semanticdesktop/aperture/1.2.0/aperture-1.2.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/bouncycastle/bcmail-jdk14/136/bcmail-jdk14-136.jar"/>
+  <classpathentry kind="var" path="M2_REPO/bouncycastle/bcprov-jdk14/136/bcprov-jdk14-136.jar" sourcepath="M2_REPO/bouncycastle/bcprov-jdk14/136/bcprov-jdk14-136-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/bouncycastle/bcprov-jdk14/136/bcprov-jdk14-136-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.3/commons-codec-1.3.jar" sourcepath="M2_REPO/commons-codec/commons-codec/1.3/commons-codec-1.3-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/commons-codec/commons-codec/1.3/commons-codec-1.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.2/commons-collections-3.2.jar" sourcepath="M2_REPO/commons-collections/commons-collections/3.2/commons-collections-3.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-dbcp/commons-dbcp/1.2.2/commons-dbcp-1.2.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar" sourcepath="M2_REPO/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.1/commons-lang-2.1.jar" sourcepath="M2_REPO/commons-lang/commons-lang/2.1/commons-lang-2.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/commons-lang/commons-lang/2.1/commons-lang-2.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" sourcepath="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-pool/commons-pool/1.3/commons-pool-1.3.jar" sourcepath="M2_REPO/commons-pool/commons-pool/1.3/commons-pool-1.3-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/fontbox/fontbox/0.1.0/fontbox-0.1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.0.1/geronimo-jms_1.1_spec-1.0.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-jpa_3.0_spec/1.0/geronimo-jpa_3.0_spec-1.0.jar" sourcepath="M2_REPO/org/apache/geronimo/specs/geronimo-jpa_3.0_spec/1.0/geronimo-jpa_3.0_spec-1.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/org/apache/geronimo/specs/geronimo-jpa_3.0_spec/1.0/geronimo-jpa_3.0_spec-1.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1/geronimo-jta_1.1_spec-1.1.jar" sourcepath="M2_REPO/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1/geronimo-jta_1.1_spec-1.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1/geronimo-jta_1.1_spec-1.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/hsqldb/hsqldb/1.8.0.1/hsqldb-1.8.0.1.jar" sourcepath="M2_REPO/hsqldb/hsqldb/1.8.0.1/hsqldb-1.8.0.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/htmlparser/htmlparser/1.6/htmlparser-1.6.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jaudiotagger/jaudiotagger/1.0.8/jaudiotagger-1.0.8.jar" sourcepath="M2_REPO/org/jaudiotagger/jaudiotagger/1.0.8/jaudiotagger-1.0.8-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/jcl104-over-slf4j/1.5.0/jcl104-over-slf4j-1.5.0.jar" sourcepath="M2_REPO/org/slf4j/jcl104-over-slf4j/1.5.0/jcl104-over-slf4j-1.5.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jempbox/jempbox/0.2.0/jempbox-0.2.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.7/junit-4.7.jar" sourcepath="M2_REPO/junit/junit/4.7/junit-4.7-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/beetstra/jutf7/jutf7/0.9.0/jutf7-0.9.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.14/log4j-1.2.14.jar" sourcepath="M2_REPO/log4j/log4j/1.2.14/log4j-1.2.14-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/lucene/lucene-core/2.9.1/lucene-core-2.9.1.jar" sourcepath="M2_REPO/org/apache/lucene/lucene-core/2.9.1/lucene-core-2.9.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/org/apache/lucene/lucene-core/2.9.1/lucene-core-2.9.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/lucene/lucene-misc/2.9.1/lucene-misc-2.9.1.jar" sourcepath="M2_REPO/org/apache/lucene/lucene-misc/2.9.1/lucene-misc-2.9.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/org/apache/lucene/lucene-misc/2.9.1/lucene-misc-2.9.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/lucene/lucene-snowball/2.9.1/lucene-snowball-2.9.1.jar" sourcepath="M2_REPO/org/apache/lucene/lucene-snowball/2.9.1/lucene-snowball-2.9.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/org/apache/lucene/lucene-snowball/2.9.1/lucene-snowball-2.9.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/drewnoakes/metadata-extractor/2.3.1/metadata-extractor-2.3.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa/1.0.2/openjpa-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa-jdbc/1.0.2/openjpa-jdbc-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa-jdbc-5/1.0.2/openjpa-jdbc-5-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa-kernel/1.0.2/openjpa-kernel-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa-kernel-5/1.0.2/openjpa-kernel-5-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa-lib/1.0.2/openjpa-lib-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa-lib-5/1.0.2/openjpa-lib-5-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa-persistence/1.0.2/openjpa-persistence-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa-persistence-jdbc/1.0.2/openjpa-persistence-jdbc-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/openjpa/openjpa-xmlstore/1.0.2/openjpa-xmlstore-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/pdfbox/pdfbox/0.7.3/pdfbox-0.7.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi/3.0-FINAL/poi-3.0-FINAL.jar" sourcepath="M2_REPO/org/apache/poi/poi/3.0-FINAL/poi-3.0-FINAL-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/opensymphony/quartz-all/1.6.3/quartz-all-1.6.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/semweb4j/rdf2go.api/4.6.2/rdf2go.api-4.6.2.jar" sourcepath="M2_REPO/org/semweb4j/rdf2go.api/4.6.2/rdf2go.api-4.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/org/semweb4j/rdf2go.api/4.6.2/rdf2go.api-4.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/semweb4j/rdf2go.impl.base/4.6.2/rdf2go.impl.base-4.6.2.jar" sourcepath="M2_REPO/org/semweb4j/rdf2go.impl.base/4.6.2/rdf2go.impl.base-4.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/org/semweb4j/rdf2go.impl.base/4.6.2/rdf2go.impl.base-4.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/semweb4j/rdf2go.impl.sesame20/4.6.2/rdf2go.impl.sesame20-4.6.2.jar" sourcepath="M2_REPO/org/semweb4j/rdf2go.impl.sesame20/4.6.2/rdf2go.impl.sesame20-4.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/org/semweb4j/rdf2go.impl.sesame20/4.6.2/rdf2go.impl.sesame20-4.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/semweb4j/rdf2go.impl.util/4.6.2/rdf2go.impl.util-4.6.2.jar" sourcepath="M2_REPO/org/semweb4j/rdf2go.impl.util/4.6.2/rdf2go.impl.util-4.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/Users/Mr%20Laptop/.m2/repository/org/semweb4j/rdf2go.impl.util/4.6.2/rdf2go.impl.util-4.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="src" path="/semanticlink-core-composite-client"/>
+  <classpathentry kind="src" path="/semanticlink-core-composite-svc"/>
+  <classpathentry kind="var" path="M2_REPO/net/sourceforge/serp/serp/1.13.1/serp-1.13.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-http-client/2.2.4/sesame-http-client-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-http-protocol/2.2.4/sesame-http-protocol-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-model/2.2.4/sesame-model-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-query/2.2.4/sesame-query-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryalgebra-evaluation/2.2.4/sesame-queryalgebra-evaluation-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryalgebra-model/2.2.4/sesame-queryalgebra-model-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryparser-api/2.2.4/sesame-queryparser-api-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryparser-serql/2.2.4/sesame-queryparser-serql-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryparser-sparql/2.2.4/sesame-queryparser-sparql-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryresultio-api/2.2.4/sesame-queryresultio-api-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryresultio-binary/2.2.4/sesame-queryresultio-binary-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryresultio-sparqljson/2.2.4/sesame-queryresultio-sparqljson-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryresultio-sparqlxml/2.2.4/sesame-queryresultio-sparqlxml-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-queryresultio-text/2.2.4/sesame-queryresultio-text-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-repository-api/2.2.4/sesame-repository-api-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-repository-contextaware/2.2.4/sesame-repository-contextaware-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-repository-dataset/2.2.4/sesame-repository-dataset-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-repository-event/2.2.4/sesame-repository-event-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-repository-http/2.2.4/sesame-repository-http-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-repository-manager/2.2.4/sesame-repository-manager-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-repository-sail/2.2.4/sesame-repository-sail-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-rio-api/2.2.4/sesame-rio-api-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-rio-n3/2.2.4/sesame-rio-n3-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-rio-ntriples/2.2.4/sesame-rio-ntriples-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-rio-rdfxml/2.2.4/sesame-rio-rdfxml-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-rio-trig/2.2.4/sesame-rio-trig-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-rio-trix/2.2.4/sesame-rio-trix-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-rio-turtle/2.2.4/sesame-rio-turtle-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-runtime/2.2.4/sesame-runtime-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-sail-api/2.2.4/sesame-sail-api-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-sail-inferencer/2.2.4/sesame-sail-inferencer-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-sail-memory/2.2.4/sesame-sail-memory-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-sail-nativerdf/2.2.4/sesame-sail-nativerdf-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openrdf/sesame/sesame-sail-rdbms/2.2.4/sesame-sail-rdbms-2.2.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.5.0/slf4j-api-1.5.0.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.5.0/slf4j-api-1.5.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-jdk14/1.5.0/slf4j-jdk14-1.5.0.jar" sourcepath="M2_REPO/org/slf4j/slf4j-jdk14/1.5.0/slf4j-jdk14-1.5.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-log4j12/1.5.0/slf4j-log4j12-1.5.0.jar" sourcepath="M2_REPO/org/slf4j/slf4j-log4j12/1.5.0/slf4j-log4j12-1.5.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-aop/2.5.5/spring-aop-2.5.5.jar" sourcepath="M2_REPO/org/springframework/spring-aop/2.5.5/spring-aop-2.5.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-beans/2.5.5/spring-beans-2.5.5.jar" sourcepath="M2_REPO/org/springframework/spring-beans/2.5.5/spring-beans-2.5.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-context/2.5.5/spring-context-2.5.5.jar" sourcepath="M2_REPO/org/springframework/spring-context/2.5.5/spring-context-2.5.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-context-support/2.5.5/spring-context-support-2.5.5.jar" sourcepath="M2_REPO/org/springframework/spring-context-support/2.5.5/spring-context-support-2.5.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-core/2.5.5/spring-core-2.5.5.jar" sourcepath="M2_REPO/org/springframework/spring-core/2.5.5/spring-core-2.5.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-jdbc/2.5.5/spring-jdbc-2.5.5.jar" sourcepath="M2_REPO/org/springframework/spring-jdbc/2.5.5/spring-jdbc-2.5.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-orm/2.5.5/spring-orm-2.5.5.jar" sourcepath="M2_REPO/org/springframework/spring-orm/2.5.5/spring-orm-2.5.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-tx/2.5.5/spring-tx-2.5.5.jar" sourcepath="M2_REPO/org/springframework/spring-tx/2.5.5/spring-tx-2.5.5-sources.jar"/>
+  <classpathentry kind="lib" path="C:/Program Files/Java/jdk1.6.0_12/lib/tools.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+</classpath>
