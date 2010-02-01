@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+	http://www.springframework.org/schema/jee
+	http://www.springframework.org/schema/jee/spring-jee-2.5.xsd">
+
+	<!--  SERVICE DEFINITIONS -->
+
+	<bean id="system.sourceService" class="se.vgr.crawler.service.SourceService">
+		<property name="sourceDao" ref="sourceDao" />
+	</bean>
+	
+	<bean id="system.linkService" class="se.vgr.crawler.service.LinkService">
+		<property name="linkDao" ref="linkDao" />
+	</bean>
+	
+	<bean id="system.searchService" class="se.vgr.crawler.service.SearchService">
+		<property name="languageAnalyzer" ref="languageAnalyzer" />
+		<property name="stopWord" ref="stopWord" />
+		<property name="luceneIndex" ref="luceneIndex" />
+	</bean>
+	
+	<bean id="system.harvesterService" class="se.vgr.crawler.service.HarvesterService" scope="prototype">
+		<property name="harvester" ref="harvester" />
+	</bean>
+	
+	<bean id="system.httpStatusService" class="se.vgr.crawler.service.HttpStatusService">
+		<property name="httpStatus" ref="httpStatus" />
+		<property name="linkDao" ref="linkDao" />
+	</bean>
+	
+	<bean id="system.harvesterJob" class="se.vgr.crawler.job.HarvesterJob">
+		<property name="sourceService" ref="system.sourceService"/>
+		<property name="harvesterService" ref="system.harvesterService"/>
+	</bean>
+	
+    <!-- DAO -->
+    
+    <bean id="linkDao" class="se.vgr.crawler.dao.impl.LinkDaoImpl" />
+    <bean id="sourceDao" class="se.vgr.crawler.dao.impl.SourceDaoImpl" />
+    
+    
+    <!-- STATUS -->
+    
+    <bean id="httpStatus" class="se.vgr.crawler.status.HttpStatus" />
+    
+    
+    <!-- CLIENT -->
+    
+    <bean id="keyWordClient" class="se.vgr.crawler.client.KeyWordClient" init-method="init" >
+   		<property name="profileId" value="${config.profileId}" />
+   		<property name="userId" value="${config.userId}" />
+   		<property name="requestId" value="${config.requestId}" />
+   		<property name="keyWordService" ref="keyWordService" />
+    </bean>
+    
+    <bean id="keyWordService" class="se.vgregion.metaservice.keywordservice.intsvc.KeywordServiceIntServiceImplService" />
+	
+
+	<!-- REPOSITORY MANAGER -->
+    
+    <bean id="repositoryManager" class="se.vgr.crawler.repository.RepositoryManager" >
+    	<constructor-arg value="${config.system}" />
+    	<property name="index" value="${config.sesameIndex}" />
+    </bean>
+    
+    <!-- LUCENE -->
+    
+    <bean id="luceneIndex" class="se.vgr.crawler.index.LuceneIndex" scope="prototype">
+    	<constructor-arg value="${config.system}" />
+	</bean>
+	
+	<bean id="languageAnalyzer" class="se.vgr.crawler.index.analysis.LanguageAnalyzer" />
+	
+	
+    <!-- HARVESTER -->
+     
+    <bean id="harvester" class="se.vgr.crawler.crawl.Harvester">
+
+		<property name="harvesterHandler" ref="harvesterHandler" />
+		<property name="repositoryManager" ref="repositoryManager" />
+		<property name="luceneIndex" ref="luceneIndex" />
+		
+	</bean>
+	
+	<bean id="harvesterHandler" class="se.vgr.crawler.crawl.handler.HarvesterHandler">
+		<property name="extractorRegistry" ref="customExtractorFactory" />
+		<property name="linkDao" ref="linkDao" />
+		<!-- <property name="keyWordClient" ref="keyWordClient" /> -->
+	</bean>
+	
+	<bean id="customExtractorFactory" class="se.vgr.crawler.extractor.CustomExtractorFactory" init-method="init">
+		<property name="extractors">
+			<list>
+				<ref bean="excelExtractor" />
+				<ref bean="htmlExtractor" />
+				<ref bean="jpgExtractor" />
+				<ref bean="officeExtractor" />
+				<ref bean="openDocumentExtractor" />
+				<ref bean="openXmlExtractor" />
+				<ref bean="pdfExtractor" />
+				<ref bean="plainTextExtractor" />
+				<ref bean="powerPointExtractor" />
+				<ref bean="presentationsExtractor" />
+				<ref bean="publisherExtractor" />
+				<ref bean="quattroExtractor" />
+				<ref bean="rtfExtractor" />
+				<ref bean="visioExtractor" />
+				<ref bean="wordExtractor" />
+				<ref bean="wordPerfectExtractor" />
+				<ref bean="worksExtractor" />
+				<ref bean="xmlExtractor" />				
+			</list>
+		</property>
+	</bean>
+    
+    <!-- EXTRACTORS -->
+    
+    <bean id="excelExtractor" class="org.semanticdesktop.aperture.extractor.excel.ExcelExtractorFactory" />
+	<bean id="htmlExtractor" class="se.vgr.crawler.extractor.html.HtmlExtractorFactory" />
+    <bean id="jpgExtractor" class="org.semanticdesktop.aperture.extractor.jpg.JpgExtractorFactory" />
+    <bean id="officeExtractor" class="org.semanticdesktop.aperture.extractor.office.OfficeExtractorFactory" />
+    <bean id="openDocumentExtractor" class="org.semanticdesktop.aperture.extractor.opendocument.OpenDocumentExtractorFactory" />
+    <bean id="openXmlExtractor" class="org.semanticdesktop.aperture.extractor.openxml.OpenXmlExtractorFactory" />
+    <bean id="pdfExtractor" class="org.semanticdesktop.aperture.extractor.pdf.PdfExtractorFactory" />
+	<bean id="plainTextExtractor" class="org.semanticdesktop.aperture.extractor.plaintext.PlainTextExtractorFactory" />
+	<bean id="powerPointExtractor" class="org.semanticdesktop.aperture.extractor.powerpoint.PowerPointExtractorFactory" />
+	<bean id="presentationsExtractor" class="org.semanticdesktop.aperture.extractor.presentations.PresentationsExtractorFactory" />
+	<bean id="publisherExtractor" class="org.semanticdesktop.aperture.extractor.publisher.PublisherExtractorFactory" />
+	<bean id="quattroExtractor" class="org.semanticdesktop.aperture.extractor.quattro.QuattroExtractorFactory" />
+	<bean id="rtfExtractor" class="org.semanticdesktop.aperture.extractor.rtf.RtfExtractorFactory" />
+	<bean id="visioExtractor" class="org.semanticdesktop.aperture.extractor.visio.VisioExtractorFactory" />
+    <bean id="wordExtractor" class="org.semanticdesktop.aperture.extractor.word.WordExtractorFactory" />
+    <bean id="wordPerfectExtractor" class="org.semanticdesktop.aperture.extractor.wordperfect.WordPerfectExtractorFactory" />
+    <bean id="worksExtractor" class="org.semanticdesktop.aperture.extractor.works.WorksExtractorFactory" />
+    <bean id="xmlExtractor" class="org.semanticdesktop.aperture.extractor.xml.XmlExtractorFactory" />
+
+	<!-- 
+	<bean id="customDataSourceRegistry" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod" value="se.vgr.crawler.CustomDataSourceRegistry.setSource" />
+		<property name="source">
+			<map>
+				<entry key="html" value-ref="WebDataSource" />
+				<entry key="mbox" value-ref="MboxDataSource" />
+				<entry key="imap" value-ref="ImapDataSource" />
+				<entry key="ical" value-ref="IcalDataSource" />
+				<entry key="file" value-ref="FileSystemDataSource" />
+				<entry key="outlook" value-ref="OutlookDataSource" />
+				<entry key="apple" value-ref="AppleAddressbookDataSource" />
+				<entry key="thunderbird" value-ref="ThunderbirdAddressbookDataSource" />
+			</map>
+		</property>
+	</bean>
+	-->
+	
+	<!-- DATASOURCES -->
+	<bean id="WebDataSource" class="org.semanticdesktop.aperture.datasource.web.WebDataSourceFactory" />
+	<bean id="MboxDataSource" class="org.semanticdesktop.aperture.datasource.mbox.MboxDataSourceFactory" />
+	<bean id="ImapDataSource" class="org.semanticdesktop.aperture.datasource.imap.ImapDataSourceFactory" />
+	<bean id="IcalDataSource" class="org.semanticdesktop.aperture.datasource.ical.IcalDataSourceFactory" />
+	<bean id="FileSystemDataSource" class="org.semanticdesktop.aperture.datasource.filesystem.FileSystemDataSourceFactory" />	
+	<bean id="OutlookDataSource" class="org.semanticdesktop.aperture.outlook.OutlookDataSourceFactory" />
+	<bean id="AppleAddressbookDataSource" class="org.semanticdesktop.aperture.addressbook.apple.AppleAddressbookDataSourceFactory" />
+	<bean id="ThunderbirdAddressbookDataSource" class="org.semanticdesktop.aperture.addressbook.thunderbird.ThunderbirdAddressbookDataSourceFactory" />
+
+	 
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+				<value>classpath:crawler-svc.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- STOPWORDS -->
+	
+	<bean id="stopWord" class="se.vgr.crawler.extractor.processor.StopWord" init-method="init">
+		<property name="map">
+			<map>
+				<entry key="sv" value="/stop_words_sv.txt" />
+				<entry key="en" value="/stop_words_en.txt" />
+			</map>
+		</property>
+	</bean>
+	
+	
+	<!-- DATASOURCE -->
+	
+	<!-- MYSQL -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.user}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="initialSize" value="${jdbc.initialSize}" />
+		<property name="maxActive" value="${jdbc.maxActive}" />
+		<property name="validationQuery" value="${jdbc.validationQuery}" />
+		<property name="testOnReturn" value="${jdbc.testOnReturn}" />
+	</bean>
+        
+
+	<!-- Managers -->
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="loadTimeWeaver">
+			<bean class="org.springframework.instrument.classloading.SimpleLoadTimeWeaver" />
+		</property>
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter">
+				<property name="showSql" value="true" />
+				<property name="generateDdl" value="true" />
+			</bean>
+		</property>
+		<property name="jpaProperties">
+            <props>
+                <prop key="openjpa.Log">SQL=TRACE</prop>
+            </props>
+        </property>
+	</bean>
+	
+	
+	<!-- bean post-processor for JPA annotations -->
+	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+	
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<tx:annotation-driven />
+
+</beans>

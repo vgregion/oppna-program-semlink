@@ -1,0 +1,14 @@
+<project-modules id="moduleCoreId" project-version="1.5.0">
+  <wb-module deploy-name="semanticlink-core-app">
+    <wb-resource deploy-path="/" source-path="src/main/application"/>
+    <dependent-module archiveName="log4j-1.2.14.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/log4j/log4j/1.2.14/log4j-1.2.14.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="semanticlink-core-module-intsvc.war" deploy-path="/" handle="module:/resource/semanticlink-core-module-intsvc/semanticlink-core-module-intsvc">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="semanticlink-core-module-web.war" deploy-path="/" handle="module:/resource/semanticlink-core-module-web/semanticlink-core-module-web">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+  </wb-module>
+</project-modules>
